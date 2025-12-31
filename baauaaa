@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Bauaaaa ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 30px 20px 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      background: white;
+      width: 100%;
+      max-width: 420px;
+      padding: 25px 20px 30px;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      text-align: center;
+      animation: popIn 1s ease;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.85); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 { color: #ff4d6d; margin-bottom: 8px; }
+    h2 { font-size: 1.1rem; margin-bottom: 15px; color: #555; }
+
+    .photo {
+      width: 150px; height: 150px; margin: 0 auto 15px;
+      border-radius: 50%; overflow: hidden;
+      border: 4px solid #ff4d6d;
+      animation: pulse 2.5s infinite;
+    }
+    .photo img { width: 100%; height: 100%; object-fit: cover; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.06); }
+      100% { transform: scale(1); }
+    }
+
+    p { font-size: 0.95rem; line-height: 1.7; }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 22px;
+      border-radius: 20px;
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      font-size: 0.9rem;
+    }
+
+    /* slideshow */
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 250px;
+      overflow: hidden;
+      border-radius: 18px;
+      margin-bottom: 15px;
+    }
+    .slideshow img {
+      position: absolute;
+      width: 100%; height: 100%; object-fit: cover;
+      opacity: 0;
+      animation: slideShow 12s infinite;
+    }
+    .slideshow img:nth-child(1) { animation-delay: 0s; }
+    .slideshow img:nth-child(2) { animation-delay: 4s; }
+    .slideshow img:nth-child(3) { animation-delay: 8s; }
+
+    @keyframes slideShow {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      30% { opacity: 1; }
+      40% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    /* hearts */
+    .heart-float {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: floatUp 8s linear infinite;
+      opacity: 0.7;
+    }
+    @keyframes floatUp {
+      from { transform: translateY(0); opacity: 0; }
+      to { transform: translateY(-110vh); opacity: 0; }
+    }
+
+    footer { margin-top: 15px; font-size: 0.85rem; color: #777; }
+  </style>
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="awara-angara-your-song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<section onclick="document.getElementById('bgMusic').play()">
+  <div class="card">
+    <h1>Happy Anniversary ❤️</h1>
+    <h2>Happy New Year Bauaaaa ✨</h2>
+
+    <div class="photo">
+      <img src="img1.jpg" alt="Bauaaaa">
+    </div>
+
+    <p>
+      Bauaaaa, April 2019 se shuru hui yeh kahani,
+      2023 mein best friends bane,
+      aur 2024 mein pyaar mein badal gayi ❤️
+    </p>
+
+    <button class="btn" onclick="document.getElementById('page2').scrollIntoView({behavior:'smooth'})">Next ➜</button>
+  </div>
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2">
+  <div class="card">
+    <h1>Since We Met 💕</h1>
+    <p id="counter"></p>
+
+    <p>
+      Har second jo guzri hai,
+      usmein thoda sa aur pyaar judta gaya.
+      Aap meri aadat bhi ho,
+      aur meri zarurat bhi.
+    </p>
+
+    <button class="btn" onclick="document.getElementById('page3').scrollIntoView({behavior:'smooth'})">Photos ➜</button>
+  </div>
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3">
+  <div class="card">
+    <h1>Our Memories 📸</h1>
+
+    <div class="slideshow">
+      <img src="img1.jpg">
+      <img src="img2.jpg">
+      <img src="img3.jpg">
+    </div>
+
+    <button class="btn" onclick="document.getElementById('page4').scrollIntoView({behavior:'smooth'})">Final ➜</button>
+  </div>
+</section>
+
+<!-- PAGE 4 -->
+<section id="page4">
+  <div class="card">
+    <h1>Bauaaaa ❤️</h1>
+    <p>
+      Bauaaaa, jab hum mile the, tab shayad kisi ne nahi socha tha
+      ke yeh rishta itna gehra ho jaayega. phir jab hum best friends bane,
+      tab aap meri har baat ki aadat ban chuki thi, aur 2024 mein jab relation me aaye ,
+      tab samajh aaya ke dil kab se sirf <strong>aap</strong> ka tha. Aapke saath
+      har pal simple hote hue bhi special lagta hai. Main wada karta hoon ke
+      chahe zindagi jaisi bhi ho, main hamesha aapka saath, aapka khayal aur
+      aapka pyaar ban kar rahunga. Aap meri kahani ka sabse khoobsurat hissa ho.
+    </p>
+
+    <button class="btn" onclick="showLove()">Tap 💖</button>
+
+    <footer>
+      — Forever yours, <strong>Betu</strong> 💕
+    </footer>
+  </div>
+</section>
+
+<script>
+  // counter from April 2019
+  const startDate = new Date('2019-04-01T00:00:00');
+  setInterval(() => {
+    const now = new Date();
+    const diff = now - startDate;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    document.getElementById('counter').innerText =
+      days + ' days, ' + hours + ' hours, ' + minutes + ' minutes together 💕';
+  }, 1000);
+
+  function showLove() {
+    alert('I Love You Bauaaaa ❤️\n— Betu');
+  }
+
+  // floating hearts
+  const hearts = ['❤️','💖','💕','💗'];
+  setInterval(() => {
+    const h = document.createElement('div');
+    h.className = 'heart-float';
+    h.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+    h.style.left = Math.random() * 100 + 'vw';
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 8000);
+  }, 900);
+</script>
+
+</body>
+</html>
